@@ -1,392 +1,346 @@
-# AI Hub CLI — Optimal MVP Plan
-> **Repo:** https://github.com/ilyas-ohm/ai-hub-cli  
-> **Package:** `aihub` · **Language:** TypeScript · **Target:** NPM global CLI  
-> **MVP Timeline:** 10–14 days (solo dev)
+# MAI (My AI) - Realistic MVP Plan
+
+## What This Actually Is
+
+A terminal tool that lets you talk to multiple AI CLIs (Claude Code, Gemini CLI) from one interface with tabs, @mention routing, and shared project context.
+
+That's it. No pipe workflows, no grid views, no 7 providers, no role-based agent systems. Get the core working first.
 
 ---
 
-## 1. Strategic Synthesis
+## Core Bet (Validate First)
 
-Both plans tackle the same problem from different angles.
+The entire project depends on one thing: **can we reliably spawn interactive AI CLIs as child processes, send them input, and stream their output?**
 
-**Plan 1** (AI CLI Hub) defines the *product*: a clean unified installer, a TUI dashboard, provider switching, and a sub-agent model browser. It's user-facing and opinionated about UX.
-
-**Plan 2** (Multi-AI Orchestrator) defines the *engine*: PTY-based subprocess control, a message router, shared-context markdown files, and multi-agent coordination. It's technically rigorous and honest about hard problems.
-
-**The optimal MVP merges both.** Plan 1 sets the UX bar and scope. Plan 2 provides the correct low-level architecture (PTY over API, file-based coordination, per-tool completion heuristics). Building Plan 1's UX on top of Plan 2's engine avoids the most common failure mode: a pretty wrapper that can't actually control the underlying CLIs reliably.
-
-### What the MVP must prove
-1. `aihub install` reliably sets up Claude Code + Gemini CLI from scratch
-2. `aihub` launches a TUI where you can switch between providers and launch them
-3. `aihub chat "..."` sends a prompt to the active provider and streams output back
-4. Config and auth persist cleanly across sessions
+If this doesn't work, nothing else matters. So we prove it before writing anything else.
 
 ---
 
-## 2. Scope Boundaries
+## Tech Stack
 
-### ✅ In MVP (v0.1)
-- Universal installer for **Claude Code** and **Gemini CLI** only
-- Interactive auth setup per provider (`aihub init`)
-- `~/.aihub/config.json` config manager
-- TUI dashboard: provider list + model list, keyboard navigation
-- `aihub use <provider>` — switch active provider
-- `aihub chat "<prompt>"` — send prompt to active provider via PTY
-- PTY-based subprocess spawning (`node-pty`)
-- Per-provider completion detection (basic heuristics)
-- NPM publish as `aihub`
+| Component | Choice | Why |
+|-----------|--------|-----|
+| Runtime | Node.js + TypeScript | Ecosystem, npm distribution |
+| CLI Framework | Commander | Standard, lightweight |
+| TUI | Ink (React for CLIs) | Best option for terminal UIs in Node |
+| Process Mgmt | execa | Simpler than node-pty, works cross-platform |
+| State | Zustand | Minimal, no boilerplate |
+| Config | cosmiconfig | Standard config loading |
+| Prompts | @clack/prompts | Better DX than inquirer |
+| Styling | chalk | Terminal colors |
+| Spinners | ora | Installation feedback |
 
-### ❌ Post-MVP (v0.2+)
-| Feature | Version |
-|---|---|
-| Codex, OpenCode, Aider, Cursor, Copilot | v0.2 |
-| Sub-agent free/premium labels in TUI | v0.2 |
-| `aihub chat --all` broadcast mode | v0.3 |
-| `handoff.md` / `memory.md` coordination | v0.3 |
-| `@mention` multi-agent routing | v0.3 |
-| Side-by-side response comparison | v0.3 |
-| Plugin system for community providers | v1.0 |
-| `aihub update` auto-updater | v1.0 |
+**Why execa instead of node-pty:**
+- node-pty requires native C++ compilation (node-gyp, Python, VS Build Tools on Windows)
+- Breaks constantly across Node versions and platforms
+- execa handles 90% of our needs with zero native deps
+- We can migrate to node-pty later IF we prove we need raw PTY control
 
 ---
 
-## 3. Tech Stack
+## Supported Providers (v1.0)
 
-| Layer | Choice | Rationale |
-|---|---|---|
-| Language | TypeScript | Type safety, great DX, matches target audience |
-| CLI framework | **Commander.js** | Lightweight, zero-overhead, well-documented |
-| Terminal UI | **Ink + React** | React mental model, composable components |
-| PTY control | **node-pty** | The only reliable way to drive interactive CLIs |
-| Install runner | **execa** | Promise-based, better than `child_process` |
-| Auth prompts | **@clack/prompts** | Modern, clean interactive prompt UX |
-| Spinners | **ora** | Standard for CLI loading states |
-| Styling | **chalk** | Universal terminal color support |
-| Config | **Plain JSON** | No abstraction overhead, easy to debug by hand |
-| ANSI stripping | **strip-ansi** | Required for parsing PTY output cleanly |
+Only two. Get them working perfectly before adding more.
+
+| CLI | Install Command | Why These Two |
+|-----|----------------|---------------|
+| Claude Code | `npm i -g @anthropic-ai/claude-code` | Best coding agent, most popular |
+| Gemini CLI | `npm i -g @google/gemini-cli` | Free, fast, good second opinion |
+
+v1.1 candidates: Aider, OpenCode. Everything else is a stretch.
 
 ---
 
-## 4. Project Structure
+## Project Structure
 
 ```
 ai-hub-cli/
-├── src/
-│   ├── cli.ts                    ← Commander entry point, registers all commands
-│   ├── config/
-│   │   └── index.ts              ← Read/write ~/.aihub/config.json
-│   ├── installer/
-│   │   ├── index.ts              ← Orchestrates detection + install flow
-│   │   └── providers/
-│   │       ├── claude.ts         ← npm install -g @anthropic/claude-code + auth
-│   │       └── gemini.ts         ← npm install -g @google/gemini-cli + auth
-│   ├── runner/
-│   │   ├── index.ts              ← Spawns correct PTY per active provider
-│   │   ├── completion.ts         ← Per-provider "done" detection heuristics
-│   │   └── adapters/
-│   │       ├── claude.ts         ← Maps aihub args → claude CLI args
-│   │       └── gemini.ts         ← Maps aihub args → gemini CLI args
-│   └── ui/
-│       ├── Dashboard.tsx         ← Root Ink component, manages layout
-│       ├── ProviderList.tsx      ← Left pane: provider selector
-│       └── ModelList.tsx         ← Right pane: model/agent selector
-├── tests/
-│   ├── config.test.ts
-│   ├── installer.test.ts
-│   └── completion.test.ts
 ├── package.json
 ├── tsconfig.json
-└── README.md
+├── .gitignore
+├── bin/
+│   └── mai.ts                    # CLI entry point
+├── src/
+│   ├── app/
+│   │   ├── App.tsx               # Root Ink component
+│   │   ├── TabBar.tsx            # Tab navigation
+│   │   ├── AgentView.tsx         # Single agent terminal view
+│   │   └── InputBar.tsx          # Command input with @mention
+│   ├── services/
+│   │   ├── process-manager.ts    # Spawn and manage CLI processes
+│   │   ├── router.ts             # Parse @mentions, route commands
+│   │   ├── config.ts             # Load/save config
+│   │   ├── installer.ts          # Install CLI tools
+│   │   └── auth.ts               # API key management
+│   ├── store/
+│   │   ├── tabs.ts               # Tab state
+│   │   └── agents.ts             # Agent process state
+│   ├── types/
+│   │   └── index.ts              # All type definitions (one file)
+│   └── utils/
+│       └── platform.ts           # OS detection helpers
+└── tests/
+    ├── router.test.ts
+    └── process-manager.test.ts
+```
+
+~20 files. Not 70.
+
+---
+
+## Phase 0: Proof of Concept (Day 1)
+
+**Goal:** Can we spawn Claude Code and Gemini CLI, send input, and read output?
+
+### Build a throwaway script that:
+1. Spawns `claude` as a child process with execa
+2. Writes a prompt to its stdin
+3. Streams stdout back to the terminal
+4. Detects when the agent is idle (waiting for input)
+5. Repeat with `gemini`
+
+### Success criteria:
+- [ ] Both CLIs launch without crashing
+- [ ] Input reaches the CLI
+- [ ] Output streams back in real-time
+- [ ] We can detect "idle" state (agent waiting for next prompt)
+- [ ] Process cleans up on exit (no zombies)
+
+### Failure plan:
+If execa can't handle interactive mode for these CLIs, try:
+1. `node-pty` (accept the native compilation pain)
+2. SDK/API mode instead of wrapping the CLI (Claude has an SDK, Gemini has an API)
+3. Pivot to a non-interactive model: run commands, collect output, display results
+
+---
+
+## Phase 1: Minimal Working Product (Days 2-5)
+
+**Goal:** A TUI where you can open tabs, each running an AI CLI, and switch between them.
+
+### 1.1 Project Setup
+- `npm init`, TypeScript config, build scripts
+- Install deps: ink, react, execa, zustand, commander, chalk
+- CLI entry point: `mai` command launches the TUI
+
+### 1.2 Process Manager (`process-manager.ts`)
+- `spawn(provider)` — start a CLI process
+- `send(id, input)` — write to process stdin
+- `onOutput(id, callback)` — stream stdout chunks
+- `kill(id)` — clean shutdown
+- `killAll()` — cleanup on exit
+- Track process state: `starting | idle | busy | error | dead`
+
+### 1.3 Zustand Stores
+- `tabs.ts` — tab list, active tab, create/close/switch
+- `agents.ts` — agent processes, status, output buffers
+
+### 1.4 Ink UI
+- `App.tsx` — layout: TabBar on top, AgentView in middle, InputBar on bottom
+- `TabBar.tsx` — horizontal tab list, active tab highlight, status dot (green/yellow/red)
+- `AgentView.tsx` — scrollable output from the active agent's process
+- `InputBar.tsx` — text input, submit sends to active agent
+
+### 1.5 Basic Keybindings
+- `Ctrl+T` — new tab (pick provider)
+- `Ctrl+W` — close tab (kill process)
+- `Tab` / `Ctrl+←/→` — switch tabs
+- `Enter` — send input to active agent
+- `Ctrl+C` — exit (kill all processes)
+
+### Deliverable:
+```
+$ mai
+┌─ claude ─┬─ gemini ─┐
+│                      │
+│  Agent output here   │
+│  streaming live...   │
+│                      │
+├──────────────────────┤
+│ > type here...       │
+└──────────────────────┘
 ```
 
 ---
 
-## 5. Config Schema
+## Phase 2: Routing & Config (Days 6-9)
 
-**Location:** `~/.aihub/config.json`
+**Goal:** @mention routing and persistent configuration.
 
+### 2.1 Command Router (`router.ts`)
+Parse input and route:
+- `hello` → send to active tab's agent
+- `@claude fix this` → send to claude tab (create one if needed)
+- `@gemini explain this` → send to gemini tab
+- `@all what is this?` → send to all agents
+
+That's it. No pipes. No sequential handoff. No "then" syntax. Just @mentions.
+
+### 2.2 Config (`config.ts`)
+- Global: `~/.mai/config.json`
+- Project: `.mai/config.json` (overrides global)
+- Schema:
 ```json
 {
-  "active": "claude",
+  "defaultProvider": "claude",
   "providers": {
     "claude": {
+      "command": "claude",
       "installed": true,
-      "apiKey": "sk-ant-...",
-      "activeModel": "claude-sonnet-4-5"
+      "apiKey": "sk-ant-..."
     },
     "gemini": {
-      "installed": true,
-      "apiKey": "AIza...",
-      "activeModel": "gemini-2.0-flash"
+      "command": "gemini",
+      "installed": true
     }
   }
 }
 ```
 
+### 2.3 Installer (`installer.ts`)
+- `mai install` — detect OS, check what's installed, install missing CLIs
+- `mai install claude` — install specific provider
+- Just runs the right npm/pip command with a spinner
+- No magic. If it fails, show the error and suggest manual install.
+
+### 2.4 Auth (`auth.ts`)
+- `mai auth` — interactive prompt for API keys
+- `mai auth claude` — set key for specific provider
+- Store in `~/.mai/config.json`
+- Validate by running `<cli> --version` or similar
+
+### Deliverable:
+- `@claude` and `@gemini` route correctly
+- `mai install` works
+- Config persists between sessions
+
 ---
 
-## 6. CLI Commands (MVP)
+## Phase 3: Context & Polish (Days 10-14)
 
-```bash
-# First-time setup: detect, install, authenticate
-aihub init
+**Goal:** Shared context file, split view, and production quality.
 
-# Open TUI dashboard
-aihub
+### 3.1 Project Memory (`.mai/memory.md`)
+One file. Not three.
+- Auto-populated with: project name, tech stack (from package.json), active providers
+- Users can manually edit it
+- Injected into agent prompts on session start (if the CLI supports initial context)
+- `mai context add "we use PostgreSQL"` — append to memory file
+- `mai context show` — print current context
 
-# Switch active provider (optionally set model)
-aihub use claude
-aihub use gemini --model flash
+### 3.2 Split View
+- `Ctrl+S` — toggle split view (two agents side by side)
+- Only 2-pane split. No grid. No 4-pane compare.
+- Handle terminal width: if too narrow, show warning
 
-# Send a prompt to the active provider
-aihub chat "explain this function"
+### 3.3 Error Handling & Cleanup
+- Graceful shutdown: SIGINT/SIGTERM handlers kill all child processes
+- Agent crash recovery: detect process exit, show error, offer to restart
+- Input validation: don't send empty strings, handle special characters
+- React error boundaries in Ink components
 
-# Manage API keys
-aihub auth
+### 3.4 Output Buffer
+- Keep last 1000 lines per agent (circular buffer)
+- Scroll up/down with arrow keys or Page Up/Down
+- Strip ANSI escape codes for any text processing
 
-# Show installed providers and active model
-aihub status
+### 3.5 CLI Polish
+- `mai` — launch TUI
+- `mai install` — install providers
+- `mai auth` — configure API keys
+- `mai status` — show what's installed and configured
+- `mai --help` — usage info
+- `mai --version` — version
+
+### Deliverable:
+Working CLI tool you could actually publish to npm. Two providers, tabs, @mentions, split view, project context.
+
+---
+
+## What We're NOT Building (v1.0)
+
+Explicitly out of scope to keep us honest:
+
+- ~~Grid view~~ — split is enough
+- ~~Compare view with diff highlighting~~ — premature
+- ~~Pipe workflows (`@claude | @gemini`)~~ — needs reliable completion detection first
+- ~~Sequential handoff ("then" syntax)~~ — same problem
+- ~~7 provider drivers~~ — 2 is plenty
+- ~~Role system (architect, reviewer, etc.)~~ — over-engineering
+- ~~handoff.md coordination~~ — agents can't read files they don't know about
+- ~~Code block extraction~~ — fragile ANSI parsing
+- ~~Plugin system~~ — v2.0 at earliest
+- ~~File watchers (Chokidar)~~ — no need yet
+- ~~node-pty~~ — unless execa fails in Phase 0
+- ~~Sub-agent/model selection~~ — use whatever the CLI defaults to
+
+---
+
+## v1.1 Roadmap (Only After v1.0 Ships)
+
+Earn these features by shipping v1.0 first:
+
+1. **Third provider** — Aider (it's popular and well-maintained)
+2. **Pipe routing** — `@claude | @gemini` (requires solving completion detection)
+3. **Model selection** — `@claude:haiku` to pick a specific model
+4. **Session persistence** — save/restore tab layout and history
+5. **Grid view** — 4-pane layout
+
+---
+
+## Risk Register
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|------------|
+| execa can't handle interactive CLI mode | Medium | Critical | Phase 0 validates this. Fallback: node-pty or API mode |
+| Ink can't render streaming output smoothly | Low | High | Buffer output, debounce renders at 16ms |
+| Can't detect agent idle state | Medium | High | Heuristic: no output for N seconds = idle. Imperfect but workable |
+| CLI tools change output format | Medium | Medium | Minimal parsing. Don't depend on exact output format |
+| Windows compatibility issues | Medium | Medium | Test on Windows from day 1 (you're already on Windows) |
+| npm package name `mai` is taken | High | Low | Use `@mai-cli/mai` or `my-ai` or `aihub` |
+
+---
+
+## Success Criteria
+
+The MVP is done when:
+
+1. `mai install` installs Claude Code and Gemini CLI
+2. `mai auth` configures API keys
+3. `mai` opens a TUI with tabbed interface
+4. You can create tabs, each running a different AI CLI
+5. `@claude` and `@gemini` route messages correctly
+6. `@all` broadcasts to all open agents
+7. Split view works with two agents side by side
+8. All processes clean up on exit
+9. Config persists between sessions
+10. It works on Windows (your machine)
+
+---
+
+## Dependencies
+
+```json
+{
+  "dependencies": {
+    "ink": "^4.4.1",
+    "react": "^18.2.0",
+    "execa": "^8.0.1",
+    "zustand": "^4.4.7",
+    "commander": "^12.0.0",
+    "@clack/prompts": "^0.7.0",
+    "cosmiconfig": "^9.0.0",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.45",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0",
+    "vitest": "^1.0.4"
+  }
+}
 ```
 
----
-
-## 7. TUI Layout
-
-```
-┌─────────────────────────────────────────────┐
-│  🤖  AI HUB  —  Terminal Interface          │
-├─────────────────┬───────────────────────────┤
-│  PROVIDERS      │  MODELS                   │
-│                 │                           │
-│ ● Claude        │  ▸ claude-sonnet-4-5  FREE│
-│ ○ Gemini        │    claude-haiku-4-5   FREE│
-│                 │    claude-opus-4-5    💎  │
-│                 │                           │
-│ [Tab] switch    │  [Enter] launch           │
-├─────────────────┴───────────────────────────┤
-│  Active: claude / claude-sonnet-4-5         │
-│  > Type your prompt or /help                │
-└─────────────────────────────────────────────┘
-
-Controls:
-  ↑ ↓         navigate lists
-  Tab         switch pane (providers ↔ models)
-  Enter       launch selected provider/model
-  /help       show commands
-  q / Ctrl+C  quit
-```
-
----
-
-## 8. Critical Technical Decisions
-
-### 8.1 PTY Over API
-Both plans agree on this. The MVP uses `node-pty` to spawn the actual CLI subprocesses rather than calling provider APIs directly. This means `aihub` works with whatever auth and config each CLI already has, avoids API key management duplication, and gives users the full CLI feature set of each tool.
-
-```typescript
-import { spawn } from 'node-pty';
-
-const pty = spawn('claude', ['--model', 'claude-sonnet-4-5'], {
-  cwd: process.cwd(),
-  env: process.env,
-  cols: process.stdout.columns,
-  rows: process.stdout.rows
-});
-
-pty.onData(data => process.stdout.write(data));  // stream to terminal
-pty.write(prompt + '\r');                         // send prompt
-```
-
-### 8.2 Completion Detection (The Hard Part)
-Each CLI has different output patterns indicating it has finished a response. This requires per-provider heuristics:
-
-| Provider | Completion Signal |
-|---|---|
-| Claude Code | Prompt re-appears (`> ` or `$`) after output |
-| Gemini CLI | Specific prompt pattern or idle timeout |
-| Generic fallback | 2s of no output after at least 1 line received |
-
-The `completion.ts` module implements these as testable detector functions — this is the riskiest piece of the MVP and needs dedicated testing.
-
-### 8.3 ANSI Stripping
-PTY output contains ANSI escape codes for colors and cursor movement. Two data streams must be maintained: the raw stream (for display) and a stripped stream (for completion detection and parsing).
-
-```typescript
-import stripAnsi from 'strip-ansi';
-
-pty.onData(data => {
-  process.stdout.write(data);               // display: raw with colors
-  completionDetector.feed(stripAnsi(data)); // parse: clean text only
-});
-```
-
-### 8.4 Auth Per Provider
-Each provider authenticates differently — flagged as the second-hardest problem in Plan 2. The MVP handles this by:
-- **Claude:** Running `claude login` and waiting for the OAuth flow to complete
-- **Gemini:** Running `gemini auth` or prompting for `GEMINI_API_KEY` env var
-- Storing API keys in `~/.aihub/config.json` (with a warning about plain-text storage; keychain integration in v0.2)
-
----
-
-## 9. Phased Implementation Plan
-
----
-
-### Phase 0 — Scaffolding
-**Duration:** Day 1  
-**Goal:** Working repo with TypeScript, linting, build pipeline, and a runnable `aihub` binary.
-
-**Tasks:**
-- Initialize repo: `npm init`, TypeScript config, ESLint + Prettier
-- Set up `tsconfig.json` targeting Node 18+
-- Install all MVP dependencies
-- Wire up `src/cli.ts` as entry point with Commander
-- Add `bin` field to `package.json` → `dist/cli.js`
-- Confirm `npx aihub --help` runs successfully from local build
-
-**Exit criteria:** `npx . --help` prints a command list without errors.
-
----
-
-### Phase 1 — Config System
-**Duration:** Day 2  
-**Goal:** Reliable read/write of `~/.aihub/config.json` with type-safe schema.
-
-**Tasks:**
-- Implement `config/index.ts`: `getConfig()`, `setConfig()`, `updateProvider()`
-- Create default config if file doesn't exist on first run
-- Handle file permission errors gracefully with clear error messages
-- Write unit tests for all config operations
-- Implement `aihub status` command using config
-
-**Exit criteria:** `aihub status` prints current provider state. Config file is created on first run. All config tests pass.
-
----
-
-### Phase 2 — Installer
-**Duration:** Days 3–4  
-**Goal:** `aihub init` detects, installs, and authenticates Claude Code and Gemini CLI end-to-end.
-
-**Tasks:**
-- Implement provider detection: check if `claude` / `gemini` binaries exist in PATH
-- Implement `installer/providers/claude.ts`:
-  - Run `npm install -g @anthropic/claude-code` via `execa` with `ora` spinner
-  - Run `claude login` and wait for OAuth flow completion
-  - Verify install: run `claude --version`
-- Implement `installer/providers/gemini.ts`:
-  - Run `npm install -g @google/gemini-cli` via `execa`
-  - Prompt for API key via `@clack/prompts`, write to config
-  - Verify install: run `gemini --version`
-- `aihub init` orchestrates the above with a checklist UX (skip already-installed providers)
-- Write config on successful install
-
-**Exit criteria:** On a clean machine, `aihub init` installs both CLIs and writes a valid config. Re-running skips already-installed providers.
-
----
-
-### Phase 3 — PTY Runner + Chat Command
-**Duration:** Days 5–7  
-**Goal:** `aihub chat "prompt"` sends a prompt to the active provider and streams the response.
-
-**Tasks:**
-- Implement `runner/index.ts`: spawns PTY based on `config.active`
-- Implement `runner/adapters/claude.ts`: maps prompt to `claude` CLI invocation args
-- Implement `runner/adapters/gemini.ts`: maps prompt to `gemini` CLI invocation args
-- Implement `runner/completion.ts`: per-provider done-detection heuristics with timeout fallback
-- Wire up `aihub chat` command: spawn PTY → write prompt → stream output → detect completion → exit cleanly
-- Handle SIGINT (Ctrl+C) cleanly: kill PTY process without leaving orphaned processes
-- Test with real prompts against both providers
-
-**Exit criteria:** `aihub chat "what is 2+2"` streams a real response from both Claude and Gemini. Ctrl+C exits cleanly.
-
----
-
-### Phase 4 — TUI Dashboard
-**Duration:** Days 8–10  
-**Goal:** `aihub` (no args) opens an interactive Ink dashboard for switching providers and launching them.
-
-**Tasks:**
-- Implement `ui/Dashboard.tsx`: root layout with two-pane structure
-- Implement `ui/ProviderList.tsx`: list of installed providers, keyboard nav with `↑ ↓`
-- Implement `ui/ModelList.tsx`: list of models for selected provider, free/premium labels
-- Wire `Tab` to switch between panes
-- Wire `Enter` to launch selected provider (hand off to runner)
-- Implement `aihub use <provider>` command (updates config, switches TUI selection)
-- Add status bar showing active provider + model
-- Add `/help` inline command reference
-
-**Exit criteria:** `aihub` opens TUI, arrow keys navigate both panes, Enter launches Claude or Gemini successfully.
-
----
-
-### Phase 5 — Polish + NPM Publish
-**Duration:** Days 11–14  
-**Goal:** Production-quality v0.1.0 release on NPM.
-
-**Tasks:**
-- Add comprehensive error handling: missing binary, auth failure, PTY crash, network errors
-- Add `aihub auth` command to re-run auth for a specific provider
-- Write `README.md`: install instructions, animated GIF demo, full command reference
-- Test on macOS, Linux (Ubuntu), and Windows (WSL2)
-- Add `engines` field to `package.json` requiring Node ≥ 18
-- Run `npm publish --access public`
-- Tag `v0.1.0` on GitHub and create release notes
-- Verify `npx aihub` works from the NPM registry on a clean machine
-
-**Exit criteria:** `npx aihub` works from NPM. README is complete. Repo tagged `v0.1.0`.
-
----
-
-## 10. Risk Register
-
-| Risk | Severity | Mitigation |
-|---|---|---|
-| Completion detection is unreliable | **High** | Start with 3s idle timeout fallback; refine per-provider heuristics iteratively with real output samples |
-| Provider CLI changes its output format | Medium | Pin provider CLI versions in `package.json` peer deps; add version check on `aihub init` |
-| Auth flow requires browser (OAuth) | Medium | Detect browser-required flows and open browser via `open` package; document fallback for headless |
-| `node-pty` native bindings fail on Windows | Medium | Document WSL2 as the supported Windows path; add check and clear error message |
-| API key stored in plaintext | Low | Add warning in v0.1 output; implement OS keychain integration in v0.2 |
-| Provider install breaks existing user configs | Low | Check for existing CLI installs before running; never overwrite existing user auth tokens |
-
----
-
-## 11. Post-MVP Roadmap
-
-```
-v0.1  ── MVP (this plan)
-         Claude + Gemini · TUI · aihub chat · NPM publish
-
-v0.2  ── Full Provider Suite
-         + Codex, OpenCode, Aider, Cursor, Copilot CLI
-         + Free/premium model labels in TUI
-         + aihub chat --provider <name> flag
-         + OS keychain for API key storage
-
-v0.3  ── Multi-Agent Orchestration
-         + @mention routing  →  @claude fix this then @gemini review
-         + handoff.md / memory.md shared context files
-         + Broadcast mode: aihub chat --all "prompt"
-         + Agent role assignment (architect / reviewer / implementer)
-
-v1.0  ── Platform
-         + Plugin system (community providers via npm packages)
-         + aihub update (auto-update all managed CLIs)
-         + Response history per provider
-         + Side-by-side diff view in terminal
-```
-
----
-
-## 12. Definition of Done (MVP)
-
-The MVP is complete when all of the following are true:
-
-- [ ] `npx aihub init` installs Claude Code + Gemini CLI from scratch on a clean machine
-- [ ] `aihub status` shows both providers as installed with correct active models
-- [ ] `aihub chat "hello"` streams a real response from the active provider
-- [ ] `aihub use gemini` switches provider and subsequent `aihub chat` uses Gemini
-- [ ] `aihub` opens TUI with keyboard navigation and successfully launches both providers
-- [ ] All commands handle errors gracefully — no unhandled promise rejections
-- [ ] `npm publish` succeeds and `npx aihub --help` works from the registry
-- [ ] README documents all commands with usage examples
-- [ ] Repo tagged `v0.1.0` on `main`
+9 runtime deps. Not 13. No native compilation required.

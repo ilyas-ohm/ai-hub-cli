@@ -1,0 +1,493 @@
+[16:15:18.801] [CHUNK-1] printable: .[?9001h.[?1004h
+[16:15:18.801] [CHUNK-1] hex: 1b 5b 3f 39 30 30 31 68 1b 5b 3f 31 30 30 34 68
+[16:15:18.967] [CHUNK-2] printable: .[?25l.[2J.[m.[HWindows PowerShell.
+Copyright (C) Microsoft Corporation. Tous droits r.serv.s..[4;1HInstallez la derni.re version de PowerShell pour de nouvelles fonctionnalit.s et am.liorations.! htt
+[16:15:18.967] [CHUNK-2] hex: 1b 5b 3f 32 35 6c 1b 5b 32 4a 1b 5b 6d 1b 5b 48 57 69 6e 64 6f 77 73 20 50 6f 77 65 72 53 68 65 6c 6c 0d 0a 43 6f 70 79 72 69 67 68 74 20 28 43 29 20 4d 69 63 72 6f 73 6f 66 74 20 43 6f 72 70 6f 72 61
+[16:15:18.977] [CHUNK-3] printable: .[?25l.[7;1H.[?25h
+[16:15:18.977] [CHUNK-3] hex: 1b 5b 3f 32 35 6c 1b 5b 37 3b 31 48 1b 5b 3f 32 35 68
+[16:15:19.351] [CHUNK-4] printable: PS C:\Users\awarid\Desktop\ai-hub-cli> 
+[16:15:19.351] [CHUNK-4] hex: 50 53 20 43 3a 5c 55 73 65 72 73 5c 61 77 61 72 69 64 5c 44 65 73 6b 74 6f 70 5c 61 69 2d 68 75 62 2d 63 6c 69 3e 20
+[16:15:21.698] [CHUNK-5] printable: .[?25l
+[16:15:21.699] [CHUNK-5] hex: 1b 5b 3f 32 35 6c
+[16:15:21.712] [CHUNK-6] printable: .[93mclaude.[?25h
+[16:15:21.712] [CHUNK-6] hex: 1b 5b 39 33 6d 63 6c 61 75 64 65 1b 5b 3f 32 35 68
+[16:15:21.728] [CHUNK-7] printable: .[m.
+
+[16:15:21.728] [CHUNK-7] hex: 1b 5b 6d 0d 0a
+[16:15:21.874] [CHUNK-8] printable: .
+
+[16:15:21.874] [CHUNK-8] hex: 0d 0a
+[16:15:23.082] [CHUNK-9] printable: (node:39928) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated..
+(Use `Claude --trace-deprecation ...` to show where the warning was created).
+
+[16:15:23.082] [CHUNK-9] hex: 28 6e 6f 64 65 3a 33 39 39 32 38 29 20 5b 44 45 50 30 31 38 30 5d 20 44 65 70 72 65 63 61 74 69 6f 6e 57 61 72 6e 69 6e 67 3a 20 66 73 2e 53 74 61 74 73 20 63 6f 6e 73 74 72 75 63 74 6f 72 20 69 73 20
+[16:15:24.922] [CHUNK-10] printable: [61256:0211/171524.920:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Acc..s refus... (0x5).
+
+[16:15:24.922] [CHUNK-10] hex: 5b 36 31 32 35 36 3a 30 32 31 31 2f 31 37 31 35 32 34 2e 39 32 30 3a 45 52 52 4f 52 3a 6e 65 74 5c 64 69 73 6b 5f 63 61 63 68 65 5c 63 61 63 68 65 5f 75 74 69 6c 5f 77 69 6e 2e 63 63 3a 32 35 5d 20 55
+[16:15:24.945] [CHUNK-11] printable: [61256:0211/171524.920:ERROR:net\disk_cache\disk_cache.cc:236] Unable to create cache.
+
+[16:15:24.945] [CHUNK-11] hex: 5b 36 31 32 35 36 3a 30 32 31 31 2f 31 37 31 35 32 34 2e 39 32 30 3a 45 52 52 4f 52 3a 6e 65 74 5c 64 69 73 6b 5f 63 61 63 68 65 5c 64 69 73 6b 5f 63 61 63 68 65 2e 63 63 3a 32 33 36 5d 20 55 6e 61 62
+[16:15:26.516] [CHUNK-12] printable: PS C:\Users\awarid\Desktop\ai-hub-cli> 
+[16:15:26.516] [CHUNK-12] hex: 50 53 20 43 3a 5c 55 73 65 72 73 5c 61 77 61 72 69 64 5c 44 65 73 6b 74 6f 70 5c 61 69 2d 68 75 62 2d 63 6c 69 3e 20
+[16:15:38.708] [CHUNK-13] printable: .[?25l
+[16:15:38.708] [CHUNK-13] hex: 1b 5b 3f 32 35 6c
+[16:15:38.719] [CHUNK-14] printable: .[93mSa.[?25h
+[16:15:38.719] [CHUNK-14] hex: 1b 5b 39 33 6d 53 61 1b 5b 3f 32 35 68
+[16:15:38.735] [CHUNK-15] printable: .[?25l.[m.[93m.[13;40HSay .[37mhello in .[97m5 .[37mword.[?25h
+[16:15:38.735] [CHUNK-15] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 33 6d 1b 5b 31 33 3b 34 30 48 53 61 79 20 1b 5b 33 37 6d 68 65 6c 6c 6f 20 69 6e 20 1b 5b 39 37 6d 35 20 1b 5b 33 37 6d 77 6f 72 64 1b 5b 3f 32 35 68
+[16:15:38.751] [CHUNK-16] printable: .[?25l.[m.[93m.[13;40HSay .[37mhello in .[97m5 .[37mwords.
+.[?25h
+[16:15:38.751] [CHUNK-16] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 33 6d 1b 5b 31 33 3b 34 30 48 53 61 79 20 1b 5b 33 37 6d 68 65 6c 6c 6f 20 69 6e 20 1b 5b 39 37 6d 35 20 1b 5b 33 37 6d 77 6f 72 64 73 0d 0a 1b 5b 3f 32 35 68
+[16:15:40.428] [CHUNK-17] printable: .[m.[38;5;9mSay : Le terme .Say. n'est pas reconnu comme nom d'applet de commande, fonction, fichier de script ou programme 
+[16:15:40.428] [CHUNK-17] hex: 1b 5b 6d 1b 5b 33 38 3b 35 3b 39 6d 53 61 79 20 3a 20 4c 65 20 74 65 72 6d 65 20 c2 ab 53 61 79 c2 bb 20 6e 27 65 73 74 20 70 61 73 20 72 65 63 6f 6e 6e 75 20 63 6f 6d 6d 65 20 6e 6f 6d 20 64 27 61 70
+[16:15:40.448] [CHUNK-18] printable: .[m.[38;5;9m.
+ex.cutable. V.rifiez l'orthographe du nom, ou si un chemin d'acc.s existe, v.rifiez que le chemin d'acc.s est correct .
+et r.essayez..
+Au caract.re Ligne:1 : 1.
++ Say hello in 5 words.
++
+[16:15:40.448] [CHUNK-18] hex: 1b 5b 6d 1b 5b 33 38 3b 35 3b 39 6d 0d 0a 65 78 c3 a9 63 75 74 61 62 6c 65 2e 20 56 c3 a9 72 69 66 69 65 7a 20 6c 27 6f 72 74 68 6f 67 72 61 70 68 65 20 64 75 20 6e 6f 6d 2c 20 6f 75 20 73 69 20 75 6e
+[16:15:40.477] [CHUNK-19] printable: .[mPS C:\Users\awarid\Desktop\ai-hub-cli> 
+[16:15:40.477] [CHUNK-19] hex: 1b 5b 6d 50 53 20 43 3a 5c 55 73 65 72 73 5c 61 77 61 72 69 64 5c 44 65 73 6b 74 6f 70 5c 61 69 2d 68 75 62 2d 63 6c 69 3e 20
+[16:16:18.702] [CHUNK-20] printable: .[?25l
+[16:16:18.702] [CHUNK-20] hex: 1b 5b 3f 32 35 6c
+[16:16:18.716] [CHUNK-21] printable: .[93mWhat .[37mi.[?25h
+[16:16:18.716] [CHUNK-21] hex: 1b 5b 39 33 6d 57 68 61 74 20 1b 5b 33 37 6d 69 1b 5b 3f 32 35 68
+[16:16:18.732] [CHUNK-22] printable: .[?25l.[m.[93m.[23;40HWhat .[37mis 2+2.
+.[?25h
+[16:16:18.732] [CHUNK-22] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 33 6d 1b 5b 32 33 3b 34 30 48 57 68 61 74 20 1b 5b 33 37 6d 69 73 20 32 2b 32 0d 0a 1b 5b 3f 32 35 68
+[16:16:18.942] [CHUNK-23] printable: .[m.[38;5;9mWhat : Le terme .What. n'est pas reconnu comme nom d'applet de commande, fonction, fichier de script ou programme 
+[16:16:18.942] [CHUNK-23] hex: 1b 5b 6d 1b 5b 33 38 3b 35 3b 39 6d 57 68 61 74 20 3a 20 4c 65 20 74 65 72 6d 65 20 c2 ab 57 68 61 74 c2 bb 20 6e 27 65 73 74 20 70 61 73 20 72 65 63 6f 6e 6e 75 20 63 6f 6d 6d 65 20 6e 6f 6d 20 64 27
+[16:16:18.949] [CHUNK-24] printable: .[m.[38;5;9m.
+ex.cutable. V.rifiez l'orthographe du nom, ou si un chemin d'acc.s existe, v.rifiez que le chemin d'acc.s est correct .
+et r.essayez..
+Au caract.re Ligne:1 : 1.
++ What is 2+2.
++ ~~~~.
+  
+[16:16:18.949] [CHUNK-24] hex: 1b 5b 6d 1b 5b 33 38 3b 35 3b 39 6d 0d 0a 65 78 c3 a9 63 75 74 61 62 6c 65 2e 20 56 c3 a9 72 69 66 69 65 7a 20 6c 27 6f 72 74 68 6f 67 72 61 70 68 65 20 64 75 20 6e 6f 6d 2c 20 6f 75 20 73 69 20 75 6e
+[16:16:18.950] [CHUNK-25] printable: .[m.
+.[38;5;9m    + FullyQualifiedErrorId : CommandNotFoundException
+[16:16:18.950] [CHUNK-25] hex: 1b 5b 6d 0d 0a 1b 5b 33 38 3b 35 3b 39 6d 20 20 20 20 2b 20 46 75 6c 6c 79 51 75 61 6c 69 66 69 65 64 45 72 72 6f 72 49 64 20 3a 20 43 6f 6d 6d 61 6e 64 4e 6f 74 46 6f 75 6e 64 45 78 63 65 70 74 69 6f
+[16:16:18.951] [CHUNK-26] printable: .[m.
+.[38;5;9m.[1C
+[16:16:18.951] [CHUNK-26] hex: 1b 5b 6d 0d 0a 1b 5b 33 38 3b 35 3b 39 6d 1b 5b 31 43
+[16:16:18.964] [CHUNK-27] printable: .[m.
+PS C:\Users\awarid\Desktop\ai-hub-cli>.[1C
+[16:16:18.964] [CHUNK-27] hex: 1b 5b 6d 0d 0a 50 53 20 43 3a 5c 55 73 65 72 73 5c 61 77 61 72 69 64 5c 44 65 73 6b 74 6f 70 5c 61 69 2d 68 75 62 2d 63 6c 69 3e 1b 5b 31 43
+[16:17:14.493] [CHUNK-28] printable: .[?25l
+[16:17:14.493] [CHUNK-28] hex: 1b 5b 3f 32 35 6c
+[16:17:14.513] [CHUNK-29] printable: .[?25h
+[16:17:14.513] [CHUNK-29] hex: 1b 5b 3f 32 35 68
+[16:17:14.539] [CHUNK-30] printable: .[?25l
+[16:17:14.539] [CHUNK-30] hex: 1b 5b 3f 32 35 6c
+[16:17:14.556] [CHUNK-31] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:14.556] [CHUNK-31] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:15.711] [CHUNK-32] printable: .[m.[?25l
+[16:17:15.711] [CHUNK-32] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:15.729] [CHUNK-33] printable: .[93m.[30;40H[ ..[?25h
+[16:17:15.729] [CHUNK-33] hex: 1b 5b 39 33 6d 1b 5b 33 30 3b 34 30 48 5b 20 08 1b 5b 3f 32 35 68
+[16:17:15.985] [CHUNK-34] printable: .[m.[?25l
+[16:17:15.985] [CHUNK-34] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:16.005] [CHUNK-35] printable: .[30;38H>  ..[?25h
+[16:17:16.005] [CHUNK-35] hex: 1b 5b 33 30 3b 33 38 48 3e 20 20 08 1b 5b 3f 32 35 68
+[16:17:17.108] [CHUNK-36] printable: .[?25l
+[16:17:17.108] [CHUNK-36] hex: 1b 5b 3f 32 35 6c
+[16:17:17.117] [CHUNK-37] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:17.117] [CHUNK-37] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:17.713] [CHUNK-38] printable: .[m.[?25l
+[16:17:17.713] [CHUNK-38] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:17.735] [CHUNK-39] printable: .[93m.[30;40H[ ..[?25h
+[16:17:17.735] [CHUNK-39] hex: 1b 5b 39 33 6d 1b 5b 33 30 3b 34 30 48 5b 20 08 1b 5b 3f 32 35 68
+[16:17:17.906] [CHUNK-40] printable: .[m.[?25l
+[16:17:17.906] [CHUNK-40] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:17.916] [CHUNK-41] printable: .[30;38H>  ..[?25h
+[16:17:17.916] [CHUNK-41] hex: 1b 5b 33 30 3b 33 38 48 3e 20 20 08 1b 5b 3f 32 35 68
+[16:17:18.309] [CHUNK-42] printable: .[?25l
+[16:17:18.309] [CHUNK-42] hex: 1b 5b 3f 32 35 6c
+[16:17:18.310] [CHUNK-43] printable: .[91m^C..[?25h
+[16:17:18.310] [CHUNK-43] hex: 1b 5b 39 31 6d 5e 43 0d 1b 5b 3f 32 35 68
+[16:17:18.319] [CHUNK-44] printable: .[m
+PS C:\Users\awarid\Desktop\ai-hub-cli>.[1C
+[16:17:18.319] [CHUNK-44] hex: 1b 5b 6d 0a 50 53 20 43 3a 5c 55 73 65 72 73 5c 61 77 61 72 69 64 5c 44 65 73 6b 74 6f 70 5c 61 69 2d 68 75 62 2d 63 6c 69 3e 1b 5b 31 43
+[16:17:18.543] [CHUNK-45] printable: .[?25l
+[16:17:18.543] [CHUNK-45] hex: 1b 5b 3f 32 35 6c
+[16:17:18.544] [CHUNK-46] printable: .[91m^C..[?25h
+[16:17:18.544] [CHUNK-46] hex: 1b 5b 39 31 6d 5e 43 0d 1b 5b 3f 32 35 68
+[16:17:18.553] [CHUNK-47] printable: .[m
+PS C:\Users\awarid\Desktop\ai-hub-cli>.[1C
+[16:17:18.553] [CHUNK-47] hex: 1b 5b 6d 0a 50 53 20 43 3a 5c 55 73 65 72 73 5c 61 77 61 72 69 64 5c 44 65 73 6b 74 6f 70 5c 61 69 2d 68 75 62 2d 63 6c 69 3e 1b 5b 31 43
+[16:17:18.767] [CHUNK-48] printable: .[?25l
+[16:17:18.767] [CHUNK-48] hex: 1b 5b 3f 32 35 6c
+[16:17:18.769] [CHUNK-49] printable: .[91m^C..[?25h
+[16:17:18.769] [CHUNK-49] hex: 1b 5b 39 31 6d 5e 43 0d 1b 5b 3f 32 35 68
+[16:17:18.788] [CHUNK-50] printable: .[m
+PS C:\Users\awarid\Desktop\ai-hub-cli>.[1C
+[16:17:18.788] [CHUNK-50] hex: 1b 5b 6d 0a 50 53 20 43 3a 5c 55 73 65 72 73 5c 61 77 61 72 69 64 5c 44 65 73 6b 74 6f 70 5c 61 69 2d 68 75 62 2d 63 6c 69 3e 1b 5b 31 43
+[16:17:19.689] [CHUNK-51] printable: .[?25l
+[16:17:19.689] [CHUNK-51] hex: 1b 5b 3f 32 35 6c
+[16:17:19.710] [CHUNK-52] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:19.710] [CHUNK-52] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:20.071] [CHUNK-53] printable: .[m.[?25l
+[16:17:20.071] [CHUNK-53] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:20.087] [CHUNK-54] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:20.087] [CHUNK-54] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:20.848] [CHUNK-55] printable: .[m.[?25l
+[16:17:20.848] [CHUNK-55] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:20.869] [CHUNK-56] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:20.870] [CHUNK-56] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:21.016] [CHUNK-57] printable: .[m.[?25l
+[16:17:21.016] [CHUNK-57] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:21.026] [CHUNK-58] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:21.026] [CHUNK-58] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:21.165] [CHUNK-59] printable: .[m.[?25l
+[16:17:21.165] [CHUNK-59] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:21.182] [CHUNK-60] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:21.182] [CHUNK-60] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:21.317] [CHUNK-61] printable: .[m.[?25l
+[16:17:21.317] [CHUNK-61] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:21.326] [CHUNK-62] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:21.326] [CHUNK-62] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:21.462] [CHUNK-63] printable: .[m.[?25l
+[16:17:21.463] [CHUNK-63] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:21.472] [CHUNK-64] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:21.472] [CHUNK-64] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:21.964] [CHUNK-65] printable: .[m.[?25l
+[16:17:21.964] [CHUNK-65] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:21.984] [CHUNK-66] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:21.984] [CHUNK-66] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.000] [CHUNK-67] printable: .[?25l.[m.[91m.[30;38H> .[93m[ 
+[16:17:22.000] [CHUNK-67] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 39 33 6d 5b 20
+[16:17:22.016] [CHUNK-68] printable: .[m.[37m.[30;40H[A.[?25h
+[16:17:22.016] [CHUNK-68] hex: 1b 5b 6d 1b 5b 33 37 6d 1b 5b 33 30 3b 34 30 48 5b 41 1b 5b 3f 32 35 68
+[16:17:22.031] [CHUNK-69] printable: .[?25l.[m.[30;38H>   .[30;40H.[?25h
+[16:17:22.031] [CHUNK-69] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 33 30 3b 33 38 48 3e 20 20 20 1b 5b 33 30 3b 34 30 48 1b 5b 3f 32 35 68
+[16:17:22.058] [CHUNK-70] printable: .[?25l.[91m.[30;38H>   
+[16:17:22.058] [CHUNK-70] hex: 1b 5b 3f 32 35 6c 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 20 20
+[16:17:22.070] [CHUNK-71] printable: .[m.[37m.[30;40H[A.[?25h
+[16:17:22.070] [CHUNK-71] hex: 1b 5b 6d 1b 5b 33 37 6d 1b 5b 33 30 3b 34 30 48 5b 41 1b 5b 3f 32 35 68
+[16:17:22.089] [CHUNK-72] printable: .[m.[?25l
+[16:17:22.089] [CHUNK-72] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.110] [CHUNK-73] printable: .[91m.[30;38H> .[37m[A
+[16:17:22.110] [CHUNK-73] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41
+[16:17:22.135] [CHUNK-74] printable: .[m.[?25h
+[16:17:22.135] [CHUNK-74] hex: 1b 5b 6d 1b 5b 3f 32 35 68
+[16:17:22.194] [CHUNK-75] printable: .[?25l
+[16:17:22.194] [CHUNK-75] hex: 1b 5b 3f 32 35 6c
+[16:17:22.197] [CHUNK-76] printable: .[30;38H> 
+[16:17:22.197] [CHUNK-76] hex: 1b 5b 33 30 3b 33 38 48 3e 20
+[16:17:22.211] [CHUNK-77] printable:   
+[16:17:22.211] [CHUNK-77] hex: 20 20
+[16:17:22.220] [CHUNK-78] printable: .[91m.[30;38H> .[37m[A
+[16:17:22.221] [CHUNK-78] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41
+[16:17:22.229] [CHUNK-79] printable: .[m.[30;38H>   
+[16:17:22.229] [CHUNK-79] hex: 1b 5b 6d 1b 5b 33 30 3b 33 38 48 3e 20 20 20
+[16:17:22.247] [CHUNK-80] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.247] [CHUNK-80] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.269] [CHUNK-81] printable: .[?25l.[m.[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.269] [CHUNK-81] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.295] [CHUNK-82] printable: .[m.[?25l
+[16:17:22.295] [CHUNK-82] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.315] [CHUNK-83] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.315] [CHUNK-83] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.327] [CHUNK-84] printable: .[m.[?25l
+[16:17:22.327] [CHUNK-84] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.338] [CHUNK-85] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.338] [CHUNK-85] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.359] [CHUNK-86] printable: .[m.[?25l
+[16:17:22.359] [CHUNK-86] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.370] [CHUNK-87] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.370] [CHUNK-87] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.387] [CHUNK-88] printable: .[m.[?25l
+[16:17:22.387] [CHUNK-88] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.402] [CHUNK-89] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.402] [CHUNK-89] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.418] [CHUNK-90] printable: .[m.[?25l
+[16:17:22.418] [CHUNK-90] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.433] [CHUNK-91] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.433] [CHUNK-91] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.448] [CHUNK-92] printable: .[?25l.[m.[30;38H> 
+[16:17:22.449] [CHUNK-92] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 33 30 3b 33 38 48 3e 20
+[16:17:22.457] [CHUNK-93] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.457] [CHUNK-93] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.479] [CHUNK-94] printable: .[m.[?25l
+[16:17:22.479] [CHUNK-94] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.487] [CHUNK-95] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.487] [CHUNK-95] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.507] [CHUNK-96] printable: .[m.[?25l
+[16:17:22.507] [CHUNK-96] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.519] [CHUNK-97] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.519] [CHUNK-97] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.537] [CHUNK-98] printable: .[m.[?25l
+[16:17:22.537] [CHUNK-98] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.550] [CHUNK-99] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.550] [CHUNK-99] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.569] [CHUNK-100] printable: .[m.[?25l
+[16:17:22.569] [CHUNK-100] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.582] [CHUNK-101] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.582] [CHUNK-101] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.597] [CHUNK-102] printable: .[m.[?25l
+[16:17:22.597] [CHUNK-102] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.605] [CHUNK-103] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.605] [CHUNK-103] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.628] [CHUNK-104] printable: .[m.[?25l
+[16:17:22.628] [CHUNK-104] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.637] [CHUNK-105] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.637] [CHUNK-105] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.667] [CHUNK-106] printable: .[m.[?25l
+[16:17:22.667] [CHUNK-106] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.685] [CHUNK-107] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.685] [CHUNK-107] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.701] [CHUNK-108] printable: .[?25l.[m.[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.701] [CHUNK-108] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.724] [CHUNK-109] printable: .[m.[?25l
+[16:17:22.724] [CHUNK-109] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.732] [CHUNK-110] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.732] [CHUNK-110] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.754] [CHUNK-111] printable: .[m.[?25l
+[16:17:22.755] [CHUNK-111] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.765] [CHUNK-112] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.765] [CHUNK-112] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.788] [CHUNK-113] printable: .[?25l.[m.[91m.[30;38H> .[93m[ ..[?25h
+[16:17:22.788] [CHUNK-113] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 39 33 6d 5b 20 08 1b 5b 3f 32 35 68
+[16:17:22.805] [CHUNK-114] printable: .[m.[37m.[A
+[16:17:22.805] [CHUNK-114] hex: 1b 5b 6d 1b 5b 33 37 6d 08 5b 41
+[16:17:22.820] [CHUNK-115] printable: .[?25l.[m.[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.820] [CHUNK-115] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.846] [CHUNK-116] printable: .[m.[?25l
+[16:17:22.846] [CHUNK-116] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.867] [CHUNK-117] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.867] [CHUNK-117] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.883] [CHUNK-118] printable: .[?25l.[m.[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.883] [CHUNK-118] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.904] [CHUNK-119] printable: .[m.[?25l
+[16:17:22.904] [CHUNK-119] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.914] [CHUNK-120] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.914] [CHUNK-120] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.937] [CHUNK-121] printable: .[?25l.[m.[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.937] [CHUNK-121] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:22.963] [CHUNK-122] printable: .[m.[?25l
+[16:17:22.964] [CHUNK-122] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:22.985] [CHUNK-123] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:22.985] [CHUNK-123] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:23.001] [CHUNK-124] printable: .[?25l.[m.[91m.[30;38H> .[37m[A.[?25h
+[16:17:23.001] [CHUNK-124] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:23.026] [CHUNK-125] printable: .[m.[?25l
+[16:17:23.026] [CHUNK-125] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:23.050] [CHUNK-126] printable: .[91m.[30;38H> .[37m[A.[?25h
+[16:17:23.050] [CHUNK-126] hex: 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:23.066] [CHUNK-127] printable: .[?25l.[m.[91m.[30;38H> .[37m[A.[?25h
+[16:17:23.066] [CHUNK-127] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:23.087] [CHUNK-128] printable: .[?25l.[m.[91m.[30;38H> .[93m[ 
+[16:17:23.087] [CHUNK-128] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 39 33 6d 5b 20
+[16:17:23.103] [CHUNK-129] printable: .[m.[37m.[30;40H[A.[?25h
+[16:17:23.103] [CHUNK-129] hex: 1b 5b 6d 1b 5b 33 37 6d 1b 5b 33 30 3b 34 30 48 5b 41 1b 5b 3f 32 35 68
+[16:17:23.119] [CHUNK-130] printable: .[?25l.[m.[91m.[30;38H> .[37m[A.[?25h
+[16:17:23.119] [CHUNK-130] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 39 31 6d 1b 5b 33 30 3b 33 38 48 3e 20 1b 5b 33 37 6d 5b 41 1b 5b 3f 32 35 68
+[16:17:24.356] [CHUNK-131] printable: .[m.[?25l
+[16:17:24.356] [CHUNK-131] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:24.370] [CHUNK-132] printable: .[93m.[30;40H[ ..[?25h
+[16:17:24.370] [CHUNK-132] hex: 1b 5b 39 33 6d 1b 5b 33 30 3b 34 30 48 5b 20 08 1b 5b 3f 32 35 68
+[16:17:24.860] [CHUNK-133] printable: .[m.[?25l
+[16:17:24.860] [CHUNK-133] hex: 1b 5b 6d 1b 5b 3f 32 35 6c
+[16:17:24.868] [CHUNK-134] printable: .[30;38H>  ..[?25h
+[16:17:24.868] [CHUNK-134] hex: 1b 5b 33 30 3b 33 38 48 3e 20 20 08 1b 5b 3f 32 35 68
+[16:17:30.379] [CHUNK-135] printable: .[?25l
+[16:17:30.379] [CHUNK-135] hex: 1b 5b 3f 32 35 6c
+[16:17:30.389] [CHUNK-136] printable:  .[93mnpx .[37mtsx poc.[?25h
+[16:17:30.389] [CHUNK-136] hex: 20 1b 5b 39 33 6d 6e 70 78 20 1b 5b 33 37 6d 74 73 78 20 70 6f 63 1b 5b 3f 32 35 68
+[16:17:30.405] [CHUNK-137] printable: .[?25l.[m.[30;40H .[93mnpx .[37mtsx poc-pty.ts.[?25h
+[16:17:30.405] [CHUNK-137] hex: 1b 5b 3f 32 35 6c 1b 5b 6d 1b 5b 33 30 3b 34 30 48 20 1b 5b 39 33 6d 6e 70 78 20 1b 5b 33 37 6d 74 73 78 20 70 6f 63 2d 70 74 79 2e 74 73 1b 5b 3f 32 35 68
+[16:17:31.409] [CHUNK-138] printable: .[m
+[16:17:31.409] [CHUNK-138] hex: 1b 5b 6d
+[16:17:31.432] [CHUNK-139] printable: .
+
+[16:17:31.432] [CHUNK-139] hex: 0d 0a
+[16:17:32.432] [CHUNK-140] printable: .]0;npm.
+[16:17:32.433] [CHUNK-140] hex: 1b 5d 30 3b 6e 70 6d 07
+[16:17:32.591] [CHUNK-141] printable: .]0;npm exec tsx poc-pty.ts.
+[16:17:32.591] [CHUNK-141] hex: 1b 5d 30 3b 6e 70 6d 20 65 78 65 63 20 74 73 78 20 70 6f 63 2d 70 74 79 2e 74 73 07
+[16:17:33.745] [CHUNK-142] printable: .
+[16:17:33.745] [CHUNK-142] hex: e2 a0 99
+[16:17:33.766] [CHUNK-143] printable: ..[K
+[16:17:33.766] [CHUNK-143] hex: 0d 1b 5b 4b
+[16:17:33.835] [CHUNK-144] printable: .]0;C:\windows\system32\cmd.exe .
+[16:17:33.835] [CHUNK-144] hex: 1b 5d 30 3b 43 3a 5c 77 69 6e 64 6f 77 73 5c 73 79 73 74 65 6d 33 32 5c 63 6d 64 2e 65 78 65 20 07
+[16:17:34.613] [CHUNK-145] printable: .....................................................
+[16:17:34.613] [CHUNK-145] hex: e2 95 94 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2
+[16:17:34.613] [CHUNK-146] printable: 
+.   MAI - PTY Debug: Why does Claude exit?         ..
+[16:17:34.613] [CHUNK-146] hex: 0a e2 95 91 20 20 20 4d 41 49 20 2d 20 50 54 59 20 44 65 62 75 67 3a 20 57 68 79 20 64 6f 65 73 20 43 6c 61 75 64 65 20 65 78 69 74 3f 20 20 20 20 20 20 20 20 20 e2 95 91 0d
+[16:17:34.613] [CHUNK-147] printable: 
+.....................................................
+
+[16:17:34.613] [CHUNK-147] hex: 0a e2 95 9a e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90
+[16:17:34.616] [CHUNK-148] printable: 
+
+[16:17:34.613] === Test 1: claude directly via PTY ===.
+[16:17:34.616] [CHUNK-148] hex: 0a 0a 5b 31 36 3a 31 37 3a 33 34 2e 36 31 33 5d 20 3d 3d 3d 20 54 65 73 74 20 31 3a 20 63 6c 61 75 64 65 20 64 69 72 65 63 74 6c 79 20 76 69 61 20 50 54 59 20 3d 3d 3d 0d
+[16:17:34.616] [CHUNK-149] printable: 
+
+[16:17:34.615] Command: claude.
+.............................................................
+[16:17:34.616] [CHUNK-149] hex: 0a 0a 5b 31 36 3a 31 37 3a 33 34 2e 36 31 35 5d 20 43 6f 6d 6d 61 6e 64 3a 20 63 6c 61 75 64 65 0d 0a e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80
+[16:17:34.631] [CHUNK-150] printable: 
+
+[16:17:34.631] [CHUNK-150] hex: 0a
+[16:17:35.014] [CHUNK-151] printable: 
+
+[16:17:35.014] [CHUNK-151] hex: 0a
+[16:17:36.201] [CHUNK-152] printable: (node:28860) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated..
+(Use `claude --trace-deprecation ...` to show where the warning was created)
+[16:17:36.201] [CHUNK-152] hex: 28 6e 6f 64 65 3a 32 38 38 36 30 29 20 5b 44 45 50 30 31 38 30 5d 20 44 65 70 72 65 63 61 74 69 6f 6e 57 61 72 6e 69 6e 67 3a 20 66 73 2e 53 74 61 74 73 20 63 6f 6e 73 74 72 75 63 74 6f 72 20 69 73 20
+[16:17:36.202] [CHUNK-153] printable: .
+
+[16:17:36.202] [CHUNK-153] hex: 0d 0a
+[16:17:38.091] [CHUNK-154] printable: [33508:0211/171738.090:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Acc..s refus... (0x5).
+[16:17:38.091] [CHUNK-154] hex: 5b 33 33 35 30 38 3a 30 32 31 31 2f 31 37 31 37 33 38 2e 30 39 30 3a 45 52 52 4f 52 3a 6e 65 74 5c 64 69 73 6b 5f 63 61 63 68 65 5c 63 61 63 68 65 5f 75 74 69 6c 5f 77 69 6e 2e 63 63 3a 32 35 5d 20 55
+[16:17:38.092] [CHUNK-155] printable: 
+[33508:0211/171738.091:ERROR:net\disk_cache\disk_cache.cc:236] Unable to create cache.
+[16:17:38.092] [CHUNK-155] hex: 0a 5b 33 33 35 30 38 3a 30 32 31 31 2f 31 37 31 37 33 38 2e 30 39 31 3a 45 52 52 4f 52 3a 6e 65 74 5c 64 69 73 6b 5f 63 61 63 68 65 5c 64 69 73 6b 5f 63 61 63 68 65 2e 63 63 3a 32 33 36 5d 20 55 6e 61
+[16:17:38.109] [CHUNK-156] printable: 
+
+[16:17:38.109] [CHUNK-156] hex: 0a
+[16:17:39.654] [CHUNK-157] printable: 
+[16:17:39.653] EXITED . code: 0, signal: undefined, chunks: 0.
+
+[16:17:39.654] [CHUNK-157] hex: 0a 5b 31 36 3a 31 37 3a 33 39 2e 36 35 33 5d 20 45 58 49 54 45 44 20 e2 80 94 20 63 6f 64 65 3a 20 30 2c 20 73 69 67 6e 61 6c 3a 20 75 6e 64 65 66 69 6e 65 64 2c 20 63 68 75 6e 6b 73 3a 20 30 0d 0a
+[16:17:39.655] [CHUNK-158] printable: .............................................................
+
+
+[16:17:39.655] [CHUNK-158] hex: e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2
+[16:17:39.655] [CHUNK-159] printable: 
+
+[16:17:39.654] === Test 2: claude via cmd.exe ===.
+[16:17:39.655] [CHUNK-159] hex: 0a 0a 5b 31 36 3a 31 37 3a 33 39 2e 36 35 34 5d 20 3d 3d 3d 20 54 65 73 74 20 32 3a 20 63 6c 61 75 64 65 20 76 69 61 20 63 6d 64 2e 65 78 65 20 3d 3d 3d 0d
+[16:17:39.656] [CHUNK-160] printable: 
+
+[16:17:39.655] Command: cmd.exe /c claude.
+[16:17:39.656] [CHUNK-160] hex: 0a 0a 5b 31 36 3a 31 37 3a 33 39 2e 36 35 35 5d 20 43 6f 6d 6d 61 6e 64 3a 20 63 6d 64 2e 65 78 65 20 2f 63 20 63 6c 61 75 64 65 0d
+[16:17:39.656] [CHUNK-161] printable: 
+.............................................................
+[16:17:39.656] [CHUNK-161] hex: 0a e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80
+[16:17:39.676] [CHUNK-162] printable: 
+
+[16:17:39.676] [CHUNK-162] hex: 0a
+[16:17:40.287] [CHUNK-163] printable: .[?25l.[2J
+[16:17:40.287] [CHUNK-163] hex: 1b 5b 3f 32 35 6c 1b 5b 32 4a
+[16:17:40.287] [CHUNK-164] printable: .[H.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.[2;1H.]0;C:\windows\SYSTEM32\cmd.exe..[?25h
+[16:17:40.287] [CHUNK-164] hex: 1b 5b 48 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d
+[16:17:41.863] [CHUNK-165] printable: (node:30584) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated..
+(Use `claude --trace-deprecation ...` to show where the warning was created).
+
+[16:17:41.863] [CHUNK-165] hex: 28 6e 6f 64 65 3a 33 30 35 38 34 29 20 5b 44 45 50 30 31 38 30 5d 20 44 65 70 72 65 63 61 74 69 6f 6e 57 61 72 6e 69 6e 67 3a 20 66 73 2e 53 74 61 74 73 20 63 6f 6e 73 74 72 75 63 74 6f 72 20 69 73 20
+[16:17:43.670] [CHUNK-166] printable: [28616:0211/171743.667:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Acc..s refus... (0x5).
+
+[16:17:43.670] [CHUNK-166] hex: 5b 32 38 36 31 36 3a 30 32 31 31 2f 31 37 31 37 34 33 2e 36 36 37 3a 45 52 52 4f 52 3a 6e 65 74 5c 64 69 73 6b 5f 63 61 63 68 65 5c 63 61 63 68 65 5f 75 74 69 6c 5f 77 69 6e 2e 63 63 3a 32 35 5d 20 55
+[16:17:43.708] [CHUNK-167] printable: [28616:0211/171743.667:ERROR:net\disk_cache\disk_cache.cc:236] Unable to create cache.
+
+[16:17:43.708] [CHUNK-167] hex: 5b 32 38 36 31 36 3a 30 32 31 31 2f 31 37 31 37 34 33 2e 36 36 37 3a 45 52 52 4f 52 3a 6e 65 74 5c 64 69 73 6b 5f 63 61 63 68 65 5c 64 69 73 6b 5f 63 61 63 68 65 2e 63 63 3a 32 33 36 5d 20 55 6e 61 62
+[16:17:45.203] [CHUNK-168] printable: .
+[16:17:45.202] EXITED . code: 0, signal: undefined, chunks: 5.
+
+[16:17:45.203] [CHUNK-168] hex: 0d 0a 5b 31 36 3a 31 37 3a 34 35 2e 32 30 32 5d 20 45 58 49 54 45 44 20 e2 80 94 20 63 6f 64 65 3a 20 30 2c 20 73 69 67 6e 61 6c 3a 20 75 6e 64 65 66 69 6e 65 64 2c 20 63 68 75 6e 6b 73 3a 20 35 0d 0a
+[16:17:45.217] [CHUNK-169] printable: .[?25l.............................................................[12;1H[16:17:45.203] === Test 3: claude --help (check available flags) ===.[14;1H[16:17:45.203] Command: claude --help.
+.............
+[16:17:45.217] [CHUNK-169] hex: 1b 5b 3f 32 35 6c e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2
+[16:17:45.703] [CHUNK-170] printable: .
+
+[16:17:45.703] [CHUNK-170] hex: 0d 0a
+[16:17:47.242] [CHUNK-171] printable: (node:45420) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated..
+(Use `claude --trace-deprecation ...` to show where the warning was created).
+
+[16:17:47.242] [CHUNK-171] hex: 28 6e 6f 64 65 3a 34 35 34 32 30 29 20 5b 44 45 50 30 31 38 30 5d 20 44 65 70 72 65 63 61 74 69 6f 6e 57 61 72 6e 69 6e 67 3a 20 66 73 2e 53 74 61 74 73 20 63 6f 6e 73 74 72 75 63 74 6f 72 20 69 73 20
+[16:17:49.116] [CHUNK-172] printable: [44648:0211/171749.115:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Acc..s refus... (0x5).
+
+[16:17:49.116] [CHUNK-172] hex: 5b 34 34 36 34 38 3a 30 32 31 31 2f 31 37 31 37 34 39 2e 31 31 35 3a 45 52 52 4f 52 3a 6e 65 74 5c 64 69 73 6b 5f 63 61 63 68 65 5c 63 61 63 68 65 5f 75 74 69 6c 5f 77 69 6e 2e 63 63 3a 32 35 5d 20 55
+[16:17:49.133] [CHUNK-173] printable: [44648:0211/171749.115:ERROR:net\disk_cache\disk_cache.cc:236] Unable to create cache.
+
+[16:17:49.133] [CHUNK-173] hex: 5b 34 34 36 34 38 3a 30 32 31 31 2f 31 37 31 37 34 39 2e 31 31 35 3a 45 52 52 4f 52 3a 6e 65 74 5c 64 69 73 6b 5f 63 61 63 68 65 5c 64 69 73 6b 5f 63 61 63 68 65 2e 63 63 3a 32 33 36 5d 20 55 6e 61 62
+[16:17:50.660] [CHUNK-174] printable: .
+[16:17:50.659] EXITED . code: 0, signal: undefined, chunks: 0.
+
+[16:17:50.660] [CHUNK-174] hex: 0d 0a 5b 31 36 3a 31 37 3a 35 30 2e 36 35 39 5d 20 45 58 49 54 45 44 20 e2 80 94 20 63 6f 64 65 3a 20 30 2c 20 73 69 67 6e 61 6c 3a 20 75 6e 64 65 66 69 6e 65 64 2c 20 63 68 75 6e 6b 73 3a 20 30 0d 0a
+[16:17:50.676] [CHUNK-175] printable: .[?25l.............................................................[27;1H[16:17:50.660] Test 4: Manual shell . type 'claude' yourself to test.[29;1H[16:17:50.660] Press Ctrl+C when done.
+.[?25h
+[16:17:50.676] [CHUNK-175] hex: 1b 5b 3f 32 35 6c e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2
+[16:17:51.044] [CHUNK-176] printable: .[?1004h
+[16:17:51.044] [CHUNK-176] hex: 1b 5b 3f 31 30 30 34 68
+[16:17:51.060] [CHUNK-177] printable: .[?25l.[2J
+[16:17:51.060] [CHUNK-177] hex: 1b 5b 3f 32 35 6c 1b 5b 32 4a
+[16:17:51.063] [CHUNK-178] printable: .[HMicrosoft Windows [version 10.0.26100.7623].[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.
+.[K.[1;44
+[16:17:51.064] [CHUNK-178] hex: 1b 5b 48 4d 69 63 72 6f 73 6f 66 74 20 57 69 6e 64 6f 77 73 20 5b 76 65 72 73 69 6f 6e 20 31 30 2e 30 2e 32 36 31 30 30 2e 37 36 32 33 5d 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b 5b 4b 0d 0a 1b
+[16:17:51.074] [CHUNK-179] printable: .[?25l.
+(c) Microsoft Corporation. Tous droits r.serv.s..[4;1HC:\Users\awarid\Desktop\ai-hub-cli>.[?25h
+[16:17:51.074] [CHUNK-179] hex: 1b 5b 3f 32 35 6c 0d 0a 28 63 29 20 4d 69 63 72 6f 73 6f 66 74 20 43 6f 72 70 6f 72 61 74 69 6f 6e 2e 20 54 6f 75 73 20 64 72 6f 69 74 73 20 72 c3 a9 73 65 72 76 c3 a9 73 2e 1b 5b 34 3b 31 48 43 3a 5c
+[16:18:07.652] [CHUNK-180] printable: ^@
+[16:18:07.652] [CHUNK-180] hex: 5e 40
+[16:18:18.733] [CHUNK-181] printable: /exit.
+
+[16:18:18.733] [CHUNK-181] hex: 2f 65 78 69 74 0d 0a
+[16:18:18.766] [CHUNK-182] printable: Plus.? 
+[16:18:18.766] [CHUNK-182] hex: 50 6c 75 73 c2 a0 3f 20
+[16:18:19.727] [CHUNK-183] printable: exit.
+
+[16:18:19.727] [CHUNK-183] hex: 65 78 69 74 0d 0a

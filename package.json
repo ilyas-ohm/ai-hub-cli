@@ -1,0 +1,30 @@
+{
+  "name": "ai-hub-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilyas-ohm/ai-hub-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ilyas-ohm/ai-hub-cli/issues"
+  },
+  "homepage": "https://github.com/ilyas-ohm/ai-hub-cli#readme",
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "execa": "^9.6.1",
+    "node-pty": "^1.1.0"
+  }
+}
