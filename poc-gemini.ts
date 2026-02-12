@@ -1,15 +1,13 @@
 /**
- * Phase 0: PTY Interactive Test (v3)
+ * Phase 0: Gemini CLI Test
  *
- * Fixed: Use full path to Claude Code CLI to avoid Claude Desktop conflict.
- *
- * Run: npx tsx poc-pty.ts
+ * Run: npx tsx poc-gemini.ts
  */
 
 import * as pty from "node-pty";
 
-// Full path to Claude Code CLI (not Claude Desktop)
-const CLAUDE_CMD = "C:\\Users\\ikarroum\\AppData\\Roaming\\npm\\claude.cmd";
+// Full path to Gemini CLI
+const GEMINI_CMD = "C:\\Users\\ikarroum\\AppData\\Roaming\\npm\\gemini.cmd";
 
 function ts(): string {
   return new Date().toISOString().split("T")[1].slice(0, 12);
@@ -21,8 +19,8 @@ function log(msg: string) {
 
 async function main() {
   console.log("╔══════════════════════════════════════════════════╗");
-  console.log("║   MAI - PTY Test: Claude Code (full path)        ║");
-  console.log("║   Using: npm\\claude.cmd (not Desktop)            ║");
+  console.log("║   MAI - PTY Test: Gemini CLI                     ║");
+  console.log("║   Using: npm\\gemini.cmd                          ║");
   console.log("╚══════════════════════════════════════════════════╝\n");
 
   const prompts = [
@@ -31,9 +29,9 @@ async function main() {
     { delay: 150000, text: "What is the capital of France? One word." },
   ];
 
-  log(`Spawning Claude Code: ${CLAUDE_CMD}`);
+  log(`Spawning Gemini CLI: ${GEMINI_CMD}`);
 
-  const proc = pty.spawn(CLAUDE_CMD, [], {
+  const proc = pty.spawn(GEMINI_CMD, [], {
     name: "xterm-256color",
     cols: 120,
     rows: 30,
@@ -76,7 +74,7 @@ async function main() {
   process.stdin.on("data", (data: Buffer) => {
     if (data.toString() === "\x03") {
       log("Ctrl+C — exiting");
-      proc.write("/exit\r");
+      proc.write("exit\r");
       setTimeout(() => {
         proc.kill();
         process.exit(0);
@@ -90,7 +88,7 @@ async function main() {
   setTimeout(() => {
     if (!exited) {
       log("Timeout 5min. Killing.");
-      proc.write("/exit\r");
+      proc.write("exit\r");
       setTimeout(() => {
         proc.kill();
         process.exit(1);

@@ -1,16 +1,21 @@
 {
   "name": "ai-hub-cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "MAI (My AI) - Multi-AI CLI Hub",
+  "main": "dist/bin/mai.js",
+  "bin": {
+    "mai": "dist/bin/mai.js"
+  },
   "scripts": {
+    "build": "tsc",
+    "dev": "tsx bin/mai.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ilyas-ohm/ai-hub-cli.git"
   },
-  "keywords": [],
+  "keywords": ["ai", "cli", "terminal", "chatbot"],
   "author": "",
   "license": "ISC",
   "type": "module",
@@ -20,11 +25,17 @@
   "homepage": "https://github.com/ilyas-ohm/ai-hub-cli#readme",
   "devDependencies": {
     "@types/node": "^25.2.3",
+    "@types/react": "^18.2.45",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
     "execa": "^9.6.1",
-    "node-pty": "^1.1.0"
+    "ink": "^4.4.1",
+    "node-pty": "^1.1.0",
+    "react": "^18.2.0",
+    "zustand": "^4.4.7"
   }
 }
