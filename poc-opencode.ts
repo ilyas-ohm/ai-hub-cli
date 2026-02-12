@@ -1,15 +1,13 @@
 /**
- * Phase 0: PTY Interactive Test (v3)
+ * Phase 0: OpenCode CLI Test
  *
- * Fixed: Use full path to Claude Code CLI to avoid Claude Desktop conflict.
- *
- * Run: npx tsx poc-pty.ts
+ * Run: npx tsx poc-opencode.ts
  */
 
 import * as pty from "node-pty";
 
-// Full path to Claude Code CLI (not Claude Desktop)
-const CLAUDE_CMD = "C:\\Users\\ikarroum\\AppData\\Roaming\\npm\\claude.cmd";
+// Full path to OpenCode CLI
+const OPENCODE_CMD = "C:\\Users\\ikarroum\\AppData\\Roaming\\npm\\opencode.cmd";
 
 function ts(): string {
   return new Date().toISOString().split("T")[1].slice(0, 12);
@@ -21,8 +19,8 @@ function log(msg: string) {
 
 async function main() {
   console.log("╔══════════════════════════════════════════════════╗");
-  console.log("║   MAI - PTY Test: Claude Code (full path)        ║");
-  console.log("║   Using: npm\\claude.cmd (not Desktop)            ║");
+  console.log("║   MAI - PTY Test: OpenCode CLI                   ║");
+  console.log("║   Using: npm\\opencode.cmd                        ║");
   console.log("╚══════════════════════════════════════════════════╝\n");
 
   const prompts = [
@@ -31,14 +29,22 @@ async function main() {
     { delay: 150000, text: "What is the capital of France? One word." },
   ];
 
-  log(`Spawning Claude Code: ${CLAUDE_CMD}`);
+  log(`Spawning OpenCode CLI: ${OPENCODE_CMD}`);
 
-  const proc = pty.spawn(CLAUDE_CMD, [], {
+  // Get actual terminal size for better rendering
+  const cols = process.stdout.columns || 120;
+  const rows = process.stdout.rows || 40;
+  
+  const proc = pty.spawn(OPENCODE_CMD, [], {
     name: "xterm-256color",
-    cols: 120,
-    rows: 30,
+    cols: cols,
+    rows: rows,
     cwd: process.cwd(),
-    env: { ...process.env } as Record<string, string>,
+    env: { 
+      ...process.env,
+      TERM: "xterm-256color",
+      COLORTERM: "truecolor"
+    } as Record<string, string>,
   });
 
   let chunkCount = 0;
